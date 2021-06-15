@@ -7,12 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		351B3A602678E7A600853A09 /* AspectVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351B3A5F2678E7A600853A09 /* AspectVGrid.swift */; };
 		352B16B4267306D6001F33CB /* SoloSetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352B16B3267306D6001F33CB /* SoloSetApp.swift */; };
-		352B16B6267306D6001F33CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352B16B5267306D6001F33CB /* ContentView.swift */; };
+		352B16B6267306D6001F33CB /* SetGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352B16B5267306D6001F33CB /* SetGameView.swift */; };
 		352B16B8267306D7001F33CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 352B16B7267306D7001F33CB /* Assets.xcassets */; };
 		352B16BB267306D7001F33CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 352B16BA267306D7001F33CB /* Preview Assets.xcassets */; };
 		352B16C6267306D7001F33CB /* SoloSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352B16C5267306D7001F33CB /* SoloSetTests.swift */; };
 		352B16D1267306D7001F33CB /* SoloSetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352B16D0267306D7001F33CB /* SoloSetUITests.swift */; };
+		352B16DF26730E03001F33CB /* CardViewShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352B16DE26730E03001F33CB /* CardViewShape.swift */; };
+		3546302C26735CBE0046D879 /* SetGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3546302B26735CBE0046D879 /* SetGame.swift */; };
+		3546302E26735D510046D879 /* CardLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3546302D26735D510046D879 /* CardLogic.swift */; };
+		356987272673B2A800A7B60D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356987262673B2A800A7B60D /* Card.swift */; };
+		356987292673B2CF00A7B60D /* ModelEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356987282673B2CF00A7B60D /* ModelEnum.swift */; };
+		35874CB52678C1EA006C7247 /* GameControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35874CB42678C1EA006C7247 /* GameControlView.swift */; };
+		35874CBA2678C8CB006C7247 /* RuleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35874CB92678C8CB006C7247 /* RuleSheet.swift */; };
+		35BE22C226743BFC0049B6B4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BE22C126743BFC0049B6B4 /* CardView.swift */; };
+		35BE22C4267440E30049B6B4 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BE22C3267440E30049B6B4 /* Theme.swift */; };
+		35BE22C8267443A30049B6B4 /* CardContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BE22C7267443A30049B6B4 /* CardContentView.swift */; };
+		35BE22CD267458BF0049B6B4 /* CardBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BE22CC267458BF0049B6B4 /* CardBackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,9 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		351B3A5F2678E7A600853A09 /* AspectVGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AspectVGrid.swift; sourceTree = "<group>"; };
 		352B16B0267306D6001F33CB /* SoloSet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoloSet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		352B16B3267306D6001F33CB /* SoloSetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoloSetApp.swift; sourceTree = "<group>"; };
-		352B16B5267306D6001F33CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		352B16B5267306D6001F33CB /* SetGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGameView.swift; sourceTree = "<group>"; };
 		352B16B7267306D7001F33CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		352B16BA267306D7001F33CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		352B16BC267306D7001F33CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +58,17 @@
 		352B16CC267306D7001F33CB /* SoloSetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoloSetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		352B16D0267306D7001F33CB /* SoloSetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoloSetUITests.swift; sourceTree = "<group>"; };
 		352B16D2267306D7001F33CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		352B16DE26730E03001F33CB /* CardViewShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewShape.swift; sourceTree = "<group>"; };
+		3546302B26735CBE0046D879 /* SetGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGame.swift; sourceTree = "<group>"; };
+		3546302D26735D510046D879 /* CardLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardLogic.swift; sourceTree = "<group>"; };
+		356987262673B2A800A7B60D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		356987282673B2CF00A7B60D /* ModelEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelEnum.swift; sourceTree = "<group>"; };
+		35874CB42678C1EA006C7247 /* GameControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameControlView.swift; sourceTree = "<group>"; };
+		35874CB92678C8CB006C7247 /* RuleSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleSheet.swift; sourceTree = "<group>"; };
+		35BE22C126743BFC0049B6B4 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		35BE22C3267440E30049B6B4 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		35BE22C7267443A30049B6B4 /* CardContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContentView.swift; sourceTree = "<group>"; };
+		35BE22CC267458BF0049B6B4 /* CardBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +120,9 @@
 			isa = PBXGroup;
 			children = (
 				352B16B3267306D6001F33CB /* SoloSetApp.swift */,
-				352B16B5267306D6001F33CB /* ContentView.swift */,
+				356987252673B21D00A7B60D /* Model */,
+				356987242673B21100A7B60D /* ViewModel */,
+				356987232673B20200A7B60D /* View */,
 				352B16B7267306D7001F33CB /* Assets.xcassets */,
 				352B16BC267306D7001F33CB /* Info.plist */,
 				352B16B9267306D7001F33CB /* Preview Content */,
@@ -130,6 +156,48 @@
 			path = SoloSetUITests;
 			sourceTree = "<group>";
 		};
+		356987232673B20200A7B60D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				352B16B5267306D6001F33CB /* SetGameView.swift */,
+				35874CB42678C1EA006C7247 /* GameControlView.swift */,
+				351B3A5F2678E7A600853A09 /* AspectVGrid.swift */,
+				35874CB92678C8CB006C7247 /* RuleSheet.swift */,
+				35BE22C126743BFC0049B6B4 /* CardView.swift */,
+				35BE22C926744A870049B6B4 /* CardContent */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		356987242673B21100A7B60D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3546302B26735CBE0046D879 /* SetGame.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		356987252673B21D00A7B60D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3546302D26735D510046D879 /* CardLogic.swift */,
+				356987262673B2A800A7B60D /* Card.swift */,
+				356987282673B2CF00A7B60D /* ModelEnum.swift */,
+				35BE22C3267440E30049B6B4 /* Theme.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		35BE22C926744A870049B6B4 /* CardContent */ = {
+			isa = PBXGroup;
+			children = (
+				35BE22C7267443A30049B6B4 /* CardContentView.swift */,
+				352B16DE26730E03001F33CB /* CardViewShape.swift */,
+				35BE22CC267458BF0049B6B4 /* CardBackView.swift */,
+			);
+			path = CardContent;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +214,8 @@
 			dependencies = (
 			);
 			name = SoloSet;
+			packageProductDependencies = (
+			);
 			productName = SoloSet;
 			productReference = 352B16B0267306D6001F33CB /* SoloSet.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +287,8 @@
 				Base,
 			);
 			mainGroup = 352B16A7267306D6001F33CB;
+			packageReferences = (
+			);
 			productRefGroup = 352B16B1267306D6001F33CB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,7 +331,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				352B16B6267306D6001F33CB /* ContentView.swift in Sources */,
+				35BE22C4267440E30049B6B4 /* Theme.swift in Sources */,
+				3546302E26735D510046D879 /* CardLogic.swift in Sources */,
+				351B3A602678E7A600853A09 /* AspectVGrid.swift in Sources */,
+				35BE22C8267443A30049B6B4 /* CardContentView.swift in Sources */,
+				356987272673B2A800A7B60D /* Card.swift in Sources */,
+				352B16DF26730E03001F33CB /* CardViewShape.swift in Sources */,
+				352B16B6267306D6001F33CB /* SetGameView.swift in Sources */,
+				35874CB52678C1EA006C7247 /* GameControlView.swift in Sources */,
+				35874CBA2678C8CB006C7247 /* RuleSheet.swift in Sources */,
+				35BE22CD267458BF0049B6B4 /* CardBackView.swift in Sources */,
+				356987292673B2CF00A7B60D /* ModelEnum.swift in Sources */,
+				3546302C26735CBE0046D879 /* SetGame.swift in Sources */,
+				35BE22C226743BFC0049B6B4 /* CardView.swift in Sources */,
 				352B16B4267306D6001F33CB /* SoloSetApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

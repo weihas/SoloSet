@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct SoloSetApp: App {
+    let game = SetGame()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SetGameView(game: game)
         }
     }
 }
