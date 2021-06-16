@@ -14,6 +14,14 @@ struct CardLogic {
     private(set) var tableTop: Array<Card>
     private(set) var cemetery: [Card] = []
     
+    var win: Bool{
+        if deck.isEmpty && !isTableCanMatch().0 {
+            return true
+        }
+        return false
+    }
+    
+    private(set) var score: Int
     
     private(set) var choosedIds: [Int]
     
@@ -26,6 +34,7 @@ struct CardLogic {
         deck = []
         tableTop = []
         choosedIds = []
+        score = 0
         newGame()
     }
     
@@ -47,11 +56,38 @@ struct CardLogic {
         }
     }
     
-    mutating func match() {
+    mutating func tip() {
+        print("tips")
+        let result = isTableCanMatch()
+        if result.0 {
+            tableTop[result.1].isTipping = true
+            tableTop[result.2].isTipping = true
+            tableTop[result.3].isTipping = true
+        }
+        
+    }
+    
+    private func isTableCanMatch() -> (Bool,Int,Int,Int) {
+        for indexA in 0..<tableTop.count-2{
+            for indexB in indexA+1..<tableTop.count-1 {
+                for indexC in indexB+1..<tableTop.count {
+                    if superCompare(a: tableTop[indexA].content, b: tableTop[indexB].content, c: tableTop[indexC].content){
+                        return (true,indexA,indexB,indexC)
+                    }
+                }
+            }
+        }
+        return (false,0,0,0)
+    }
+    
+    
+    
+    private mutating func match() {
         if let firstCard = tableTop.first(where: {$0.id == choosedIds[0]}),
            let secondCard = tableTop.first(where: {$0.id == choosedIds[1]}),
            let thirdCard = tableTop.first(where: {$0.id == choosedIds[2]}){
             if superCompare(a: firstCard.content, b: secondCard.content, c: thirdCard.content) {
+                score += 3
                 for choosedId in choosedIds{
                     if let i = tableTop.indices.first(where: {tableTop[$0].id == choosedId}) {
                         cemetery.append(tableTop.remove(at: i))
@@ -63,6 +99,7 @@ struct CardLogic {
                     tableTop.append(deck.removeFirst())
                 }
             }else{
+                score -= 1
                 for choosedId in choosedIds{
                     if let i = tableTop.indices.first(where: {tableTop[$0].id == choosedId}) {
                         tableTop[i].isChoosing = false
@@ -75,7 +112,7 @@ struct CardLogic {
     
     
     
-    func superCompare(a:Card.Content,b:Card.Content,c:Card.Content) -> Bool {
+    private func superCompare(a:Card.Content,b:Card.Content,c:Card.Content) -> Bool {
         let colorSet: Set<Color> = [a.color,b.color,c.color]
         let symbolSet : Set<Symbol> = [a.symbol,b.symbol,c.symbol]
         let numSet : Set<Int> = [a.num,b.num,c.num]
@@ -92,7 +129,7 @@ struct CardLogic {
     
     
     mutating func newGame() {
-        deck = []
+        deck.removeAll()
         for colorIndex in 0...2 {
             let color = CardLogic.colors[colorIndex]
             for symbolIndex in 0...2 {
@@ -108,31 +145,29 @@ struct CardLogic {
                 }
             }
         }
+        deck.shuffle()
         
-//        deck.shuffle()
-        
-        tableTop = []
+        tableTop.removeAll()
         for _ in 0..<12 {
             tableTop.append(deck.removeFirst())
             
         }
         
-        choosedIds = []
-        
+        choosedIds.removeAll()
+        score = 0
     }
     
     
     
     mutating func deliver(){
         if !deck.isEmpty {
+            if isTableCanMatch().0{
+                score -= 2
+            }
             for _ in 0...2 {
                 tableTop.append(deck.removeFirst())
             }
         }
     }
-    
-    
 
-
-    
 }

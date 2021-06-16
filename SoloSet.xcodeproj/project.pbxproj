@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,12 +19,13 @@
 		3546302E26735D510046D879 /* CardLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3546302D26735D510046D879 /* CardLogic.swift */; };
 		356987272673B2A800A7B60D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356987262673B2A800A7B60D /* Card.swift */; };
 		356987292673B2CF00A7B60D /* ModelEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356987282673B2CF00A7B60D /* ModelEnum.swift */; };
-		35874CB52678C1EA006C7247 /* GameControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35874CB42678C1EA006C7247 /* GameControlView.swift */; };
+		35874CB52678C1EA006C7247 /* SetGameBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35874CB42678C1EA006C7247 /* SetGameBaseView.swift */; };
 		35874CBA2678C8CB006C7247 /* RuleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35874CB92678C8CB006C7247 /* RuleSheet.swift */; };
 		35BE22C226743BFC0049B6B4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BE22C126743BFC0049B6B4 /* CardView.swift */; };
 		35BE22C4267440E30049B6B4 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BE22C3267440E30049B6B4 /* Theme.swift */; };
 		35BE22C8267443A30049B6B4 /* CardContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BE22C7267443A30049B6B4 /* CardContentView.swift */; };
 		35BE22CD267458BF0049B6B4 /* CardBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BE22CC267458BF0049B6B4 /* CardBackView.swift */; };
+		35CBF2522679AAB70034A55E /* MDText in Frameworks */ = {isa = PBXBuildFile; productRef = 35CBF2512679AAB70034A55E /* MDText */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +64,7 @@
 		3546302D26735D510046D879 /* CardLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardLogic.swift; sourceTree = "<group>"; };
 		356987262673B2A800A7B60D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		356987282673B2CF00A7B60D /* ModelEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelEnum.swift; sourceTree = "<group>"; };
-		35874CB42678C1EA006C7247 /* GameControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameControlView.swift; sourceTree = "<group>"; };
+		35874CB42678C1EA006C7247 /* SetGameBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGameBaseView.swift; sourceTree = "<group>"; };
 		35874CB92678C8CB006C7247 /* RuleSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleSheet.swift; sourceTree = "<group>"; };
 		35BE22C126743BFC0049B6B4 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		35BE22C3267440E30049B6B4 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -76,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35CBF2522679AAB70034A55E /* MDText in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				352B16B5267306D6001F33CB /* SetGameView.swift */,
-				35874CB42678C1EA006C7247 /* GameControlView.swift */,
+				35874CB42678C1EA006C7247 /* SetGameBaseView.swift */,
 				351B3A5F2678E7A600853A09 /* AspectVGrid.swift */,
 				35874CB92678C8CB006C7247 /* RuleSheet.swift */,
 				35BE22C126743BFC0049B6B4 /* CardView.swift */,
@@ -215,6 +217,7 @@
 			);
 			name = SoloSet;
 			packageProductDependencies = (
+				35CBF2512679AAB70034A55E /* MDText */,
 			);
 			productName = SoloSet;
 			productReference = 352B16B0267306D6001F33CB /* SoloSet.app */;
@@ -288,6 +291,7 @@
 			);
 			mainGroup = 352B16A7267306D6001F33CB;
 			packageReferences = (
+				35CBF2502679AAB70034A55E /* XCRemoteSwiftPackageReference "MDText" */,
 			);
 			productRefGroup = 352B16B1267306D6001F33CB /* Products */;
 			projectDirPath = "";
@@ -338,7 +342,7 @@
 				356987272673B2A800A7B60D /* Card.swift in Sources */,
 				352B16DF26730E03001F33CB /* CardViewShape.swift in Sources */,
 				352B16B6267306D6001F33CB /* SetGameView.swift in Sources */,
-				35874CB52678C1EA006C7247 /* GameControlView.swift in Sources */,
+				35874CB52678C1EA006C7247 /* SetGameBaseView.swift in Sources */,
 				35874CBA2678C8CB006C7247 /* RuleSheet.swift in Sources */,
 				35BE22CD267458BF0049B6B4 /* CardBackView.swift in Sources */,
 				356987292673B2CF00A7B60D /* ModelEnum.swift in Sources */,
@@ -664,6 +668,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		35CBF2502679AAB70034A55E /* XCRemoteSwiftPackageReference "MDText" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Lambdo-Labs/MDText";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.10;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		35CBF2512679AAB70034A55E /* MDText */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 35CBF2502679AAB70034A55E /* XCRemoteSwiftPackageReference "MDText" */;
+			productName = MDText;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 352B16A8267306D6001F33CB /* Project object */;
 }

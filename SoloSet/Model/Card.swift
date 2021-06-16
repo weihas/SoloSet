@@ -12,7 +12,7 @@ struct Card: Identifiable {
     
     var isChoosing = false
     
-    var isMatched = false
+    var isTipping = false
     var content: Content
     
     

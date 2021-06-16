@@ -14,12 +14,17 @@ struct CardView: View {
     
     var body: some View{
         ZStack{
-            CardContentView(card: card)
+            CardContentView(content: card.content)
                 .foregroundColor(card.content.color)
             if card.isChoosing{
                 RoundedRectangle(cornerRadius: CardSize.cardCornerRadius)
                     .stroke(lineWidth: CardSize.cardStrokeLineWidth+3)
                     .shadow(radius: 3, x: 1, y: 1)
+            }else if card.isTipping{
+                RoundedRectangle(cornerRadius: CardSize.cardCornerRadius)
+                    .stroke(lineWidth: CardSize.cardStrokeLineWidth+3)
+                    .shadow(radius: 3, x: 1, y: 1)
+                    .foregroundColor(.green)
             }else{
                 RoundedRectangle(cornerRadius: CardSize.cardCornerRadius)
                     .stroke(lineWidth: CardSize.cardStrokeLineWidth)

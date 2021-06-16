@@ -1,5 +1,5 @@
 //
-//  GameControlView.swift
+//  SetGameBaseView.swift
 //  SoloSet
 //
 //  Created by WeIHa'S on 2021/6/15.
@@ -7,12 +7,13 @@
 
 import SwiftUI
 
-struct GameControlView: View {
+struct SetGameBaseView: View {
     @ObservedObject var game: SetGame
     @State var Showrule: Bool = false
     
     var body: some View {
         VStack{
+            Text("Score:\(game.score)")
             Divider()
             HStack{
                 Spacer()
@@ -24,6 +25,9 @@ struct GameControlView: View {
                                 .frame(width: 100, height: 100, alignment: .center)
                                 .offset(x: CGFloat(index*2), y: CGFloat(-index))
                         }
+                    }
+                    .onTapGesture {
+                        game.tip()
                     }
                     Text("Deck:\(game.cardsDeck.count)")
                 }
@@ -66,6 +70,6 @@ struct GameControlView: View {
 struct GameControlView_Previews: PreviewProvider {
     static var previews: some View {
         let geme = SetGame()
-        GameControlView(game: geme)
+        SetGameBaseView(game: geme)
     }
 }

@@ -16,21 +16,16 @@ struct SetGameView: View {
         VStack{
             Text("SoloSet")
                 .font(.title)
-            ScrollView{
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: 70))]) {
-                    ForEach(game.tabletopCards){card in
-                        CardView(card: card, themeColor: game.themeColor)
-                            .aspectRatio(2/3, contentMode: .fit)
-                            .padding(5)
-                            .onTapGesture {
-                                game.choose(card)
-                                if game.tabletopCards.isEmpty{
-                                    win.toggle()
-                                }
-                            }
+            AspectVGrid(items: game.tabletopCards, aspectRadio: 2/3) { card in
+                CardView(card: card, themeColor: game.themeColor)
+                    .onTapGesture {
+                        game.choose(card)
+                        win = game.win
                     }
-                }
-            }.padding()
+                    .padding(8)
+            }
+            .padding()
+            
             .alert(isPresented: $win) {
                 Alert(title: Text("Win!"),message: Text("You have clear all the cards!."),
                       primaryButton: .default(
@@ -47,10 +42,11 @@ struct SetGameView: View {
                       )
                 )
             }
-            GameControlView(game: game)
+            SetGameBaseView(game: game)
         }
     }
 }
+
 
 
 

@@ -34,11 +34,19 @@ class SetGame: ObservableObject {
     var cardsCemetery: Array<Card>{
         return cardLogic.cemetery
     }
+    
+    var score: Int{
+        return cardLogic.score
+    }
+    
+    var win: Bool{
+        return cardLogic.win
+    }
+    
 
     var themeColor: Color{
         return theme.ThemeColor
     }
-
     
     var themeName: String{
         return theme.ThemeName
@@ -59,6 +67,11 @@ class SetGame: ObservableObject {
     func newGame() {
         cardLogic.newGame()
     }
+    
+    func tip() {
+        cardLogic.tip()
+    }
+    
     
     func exit() {
     }
