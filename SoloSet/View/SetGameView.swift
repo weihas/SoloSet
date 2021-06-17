@@ -14,8 +14,6 @@ struct SetGameView: View {
     
     var body: some View {
         VStack{
-            Text("SoloSet")
-                .font(.title)
             AspectVGrid(items: game.tabletopCards, aspectRadio: 2/3) { card in
                 CardView(card: card, themeColor: game.themeColor)
                     .onTapGesture {

@@ -37,7 +37,7 @@
       "size" : "40x40"
     },
     {
-      "filename" : "New icon-60@2x-1.png",
+      "filename" : "New icon-60@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
@@ -67,7 +67,7 @@
       "size" : "29x29"
     },
     {
-      "filename" : "New icon-Settings@2x~ipad-1.png",
+      "filename" : "New icon-Settings@2x~ipad.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "29x29"
@@ -91,7 +91,7 @@
       "size" : "76x76"
     },
     {
-      "filename" : "New icon-76@2x~ipad-1.png",
+      "filename" : "New icon-76@2x~ipad.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "76x76"

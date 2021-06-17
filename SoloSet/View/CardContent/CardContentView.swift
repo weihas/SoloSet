@@ -43,15 +43,16 @@ struct CardContentView: View {
     @ViewBuilder
     func diamond() -> some View {
         GeometryReader{ geometry in
+            let strokeline = geometry.size.width * ShapeSize.strokeLineScale
             ZStack{
-                DiamondShape(size: geometry.size, contentScale: CardView.CardSize.contentScale)
-                    .stroke(lineWidth: CardView.CardSize.shapeStrokeLineWidth)
+                DiamondShape(size: geometry.size, contentScale: ShapeSize.contentScale)
+                    .stroke(lineWidth: strokeline)
                 if content.shading == .solid{
-                    DiamondShape(size: geometry.size, contentScale: CardView.CardSize.contentScale)
+                    DiamondShape(size: geometry.size, contentScale: ShapeSize.contentScale)
                 }else if content.shading == .diagonal{
-                    cover(size: geometry.size, contentScale: CardView.CardSize.contentScale, strokeLine: CardView.CardSize.shapeStrokeLineWidth)
-                        .stroke(lineWidth: CardView.CardSize.shapeStrokeLineWidth)
-                        .clipShape(DiamondShape(size: geometry.size, contentScale: CardView.CardSize.contentScale))
+                    cover(size: geometry.size, contentScale: ShapeSize.contentScale, strokeLine: strokeline)
+                        .stroke(lineWidth: strokeline)
+                        .clipShape(DiamondShape(size: geometry.size, contentScale: ShapeSize.contentScale))
                 }
             }
         }
@@ -60,15 +61,16 @@ struct CardContentView: View {
     @ViewBuilder
     func capsule() -> some View {
         GeometryReader{ geometry in
+            let strokeline = geometry.size.width * ShapeSize.strokeLineScale
             ZStack{
-                CapsuleShape(size: geometry.size, contentScale: CardView.CardSize.contentScale)
-                    .stroke(lineWidth: CardView.CardSize.shapeStrokeLineWidth)
+                CapsuleShape(size: geometry.size, contentScale: ShapeSize.contentScale)
+                    .stroke(lineWidth: strokeline)
                 if content.shading == .solid{
-                    CapsuleShape(size: geometry.size, contentScale: CardView.CardSize.contentScale)
+                    CapsuleShape(size: geometry.size, contentScale: ShapeSize.contentScale)
                 }else if content.shading == .diagonal{
-                    cover(size: geometry.size, contentScale: CardView.CardSize.contentScale, strokeLine: CardView.CardSize.shapeStrokeLineWidth)
-                        .stroke(lineWidth: CardView.CardSize.shapeStrokeLineWidth)
-                        .clipShape(CapsuleShape(size: geometry.size, contentScale: CardView.CardSize.contentScale))
+                    cover(size: geometry.size, contentScale: ShapeSize.contentScale, strokeLine: strokeline)
+                        .stroke(lineWidth: strokeline)
+                        .clipShape(CapsuleShape(size: geometry.size, contentScale: ShapeSize.contentScale))
                 }
             }
         }
@@ -79,20 +81,24 @@ struct CardContentView: View {
     @ViewBuilder
     func curve() -> some View {
         GeometryReader{ geometry in
-            CurveShape(size: geometry.size, contentScale: CardView.CardSize.contentScale)
-                .stroke(lineWidth: CardView.CardSize.shapeStrokeLineWidth)
+            let strokeline = geometry.size.width * ShapeSize.strokeLineScale
+            CurveShape(size: geometry.size, contentScale: ShapeSize.contentScale)
+                .stroke(lineWidth: strokeline)
             if content.shading == .solid{
-                CurveShape(size: geometry.size, contentScale: CardView.CardSize.contentScale)
+                CurveShape(size: geometry.size, contentScale: ShapeSize.contentScale)
             }else if content.shading == .diagonal{
-                cover(size: geometry.size, contentScale: CardView.CardSize.contentScale, strokeLine: CardView.CardSize.shapeStrokeLineWidth)
-                    .stroke(lineWidth: CardView.CardSize.shapeStrokeLineWidth)
-                    .clipShape(CurveShape(size: geometry.size, contentScale: CardView.CardSize.contentScale))
+                cover(size: geometry.size, contentScale: ShapeSize.contentScale, strokeLine: strokeline)
+                    .stroke(lineWidth: strokeline)
+                    .clipShape(CurveShape(size: geometry.size, contentScale: ShapeSize.contentScale))
             }
         }
     }
 
 
-    
+    struct ShapeSize{
+        static var contentScale: CGFloat = 0.6
+        static var strokeLineScale: CGFloat = 1/35
+    }
     
 }
 

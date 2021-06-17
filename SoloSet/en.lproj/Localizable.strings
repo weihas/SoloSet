@@ -1,0 +1,46 @@
+/* 
+  Localizable.strings
+  SoloSet
+
+  Created by WeIHa'S on 2021/6/17.
+  
+*/
+
+"Title" = "Rules";
+"Introduce" = "
+The object of the game is to identify a 'Set' of three cards from 12 cards laid out on the table. Each card has a variation of the following four features:
+
+1) COLOR: Each card is red, green, or blue.
+2) SYMBOL: Each card contains ovals, squiggles, or diamonds.
+3) NUMBER: Each card has one, two, or three symbols.
+4) SHADING: Each card is solid, open, or striped.
+
+A 'Set' consists of three cards in which each feature is EITHER the same on each card OR is different on each card. That is to say, any feature in the 'Set' of three cards is either common to all three cards or is different on each card.
+
+Score rules:
+
+1) Every time you choose three cards to successfully match, you will get three points, and vice versa, you will deduct one point.
+
+2) If you choose to license because you think there is no matching card on the desktop, but there is actually a matching card, you will be deducted by two points.
+
+3) If you select the prompt (click the card group), then select the prompt card, which will not be counted as the score.
+
+";
+
+
+
+
+
+
+
+"Example" = "For Example:";
+
+"Exa1" = "
+1) color: different on each card, symbol: the same on each card (oval), number: the same on each (two), shading: the same on each card (solid)";
+"Exa2" = "
+2) color: different on each card, symbol: different on each card, number: different on each card, shading: different on each card";
+
+"Exa3" = "
+3) color: the same on each card (green), symbol: the same on each card (diamond), number: different on each card, shading: different on each card
+
+Don't mistakenly think that there are only the above three situations.";

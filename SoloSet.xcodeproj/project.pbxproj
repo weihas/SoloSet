@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,11 +21,12 @@
 		356987292673B2CF00A7B60D /* ModelEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356987282673B2CF00A7B60D /* ModelEnum.swift */; };
 		35874CB52678C1EA006C7247 /* SetGameBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35874CB42678C1EA006C7247 /* SetGameBaseView.swift */; };
 		35874CBA2678C8CB006C7247 /* RuleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35874CB92678C8CB006C7247 /* RuleSheet.swift */; };
+		3589F1C3267AF24B00D59F58 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3589F1C5267AF24B00D59F58 /* Localizable.strings */; };
+		3589F1C8267B018600D59F58 /* ExampleCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3589F1C7267B018600D59F58 /* ExampleCards.swift */; };
 		35BE22C226743BFC0049B6B4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BE22C126743BFC0049B6B4 /* CardView.swift */; };
 		35BE22C4267440E30049B6B4 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BE22C3267440E30049B6B4 /* Theme.swift */; };
 		35BE22C8267443A30049B6B4 /* CardContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BE22C7267443A30049B6B4 /* CardContentView.swift */; };
 		35BE22CD267458BF0049B6B4 /* CardBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BE22CC267458BF0049B6B4 /* CardBackView.swift */; };
-		35CBF2522679AAB70034A55E /* MDText in Frameworks */ = {isa = PBXBuildFile; productRef = 35CBF2512679AAB70034A55E /* MDText */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,9 @@
 		356987282673B2CF00A7B60D /* ModelEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelEnum.swift; sourceTree = "<group>"; };
 		35874CB42678C1EA006C7247 /* SetGameBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGameBaseView.swift; sourceTree = "<group>"; };
 		35874CB92678C8CB006C7247 /* RuleSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleSheet.swift; sourceTree = "<group>"; };
+		3589F1C4267AF24B00D59F58 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3589F1C6267AF24E00D59F58 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		3589F1C7267B018600D59F58 /* ExampleCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCards.swift; sourceTree = "<group>"; };
 		35BE22C126743BFC0049B6B4 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		35BE22C3267440E30049B6B4 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		35BE22C7267443A30049B6B4 /* CardContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContentView.swift; sourceTree = "<group>"; };
@@ -77,7 +81,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35CBF2522679AAB70034A55E /* MDText in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +129,7 @@
 				356987242673B21100A7B60D /* ViewModel */,
 				356987232673B20200A7B60D /* View */,
 				352B16B7267306D7001F33CB /* Assets.xcassets */,
+				3589F1C5267AF24B00D59F58 /* Localizable.strings */,
 				352B16BC267306D7001F33CB /* Info.plist */,
 				352B16B9267306D7001F33CB /* Preview Content */,
 			);
@@ -186,6 +190,7 @@
 				356987262673B2A800A7B60D /* Card.swift */,
 				356987282673B2CF00A7B60D /* ModelEnum.swift */,
 				35BE22C3267440E30049B6B4 /* Theme.swift */,
+				3589F1C7267B018600D59F58 /* ExampleCards.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,7 +222,6 @@
 			);
 			name = SoloSet;
 			packageProductDependencies = (
-				35CBF2512679AAB70034A55E /* MDText */,
 			);
 			productName = SoloSet;
 			productReference = 352B16B0267306D6001F33CB /* SoloSet.app */;
@@ -288,10 +292,10 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 352B16A7267306D6001F33CB;
 			packageReferences = (
-				35CBF2502679AAB70034A55E /* XCRemoteSwiftPackageReference "MDText" */,
 			);
 			productRefGroup = 352B16B1267306D6001F33CB /* Products */;
 			projectDirPath = "";
@@ -310,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				352B16BB267306D7001F33CB /* Preview Assets.xcassets in Resources */,
+				3589F1C3267AF24B00D59F58 /* Localizable.strings in Resources */,
 				352B16B8267306D7001F33CB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +343,7 @@
 				35BE22C4267440E30049B6B4 /* Theme.swift in Sources */,
 				3546302E26735D510046D879 /* CardLogic.swift in Sources */,
 				351B3A602678E7A600853A09 /* AspectVGrid.swift in Sources */,
+				3589F1C8267B018600D59F58 /* ExampleCards.swift in Sources */,
 				35BE22C8267443A30049B6B4 /* CardContentView.swift in Sources */,
 				356987272673B2A800A7B60D /* Card.swift in Sources */,
 				352B16DF26730E03001F33CB /* CardViewShape.swift in Sources */,
@@ -382,6 +388,18 @@
 			targetProxy = 352B16CD267306D7001F33CB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3589F1C5267AF24B00D59F58 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3589F1C4267AF24B00D59F58 /* en */,
+				3589F1C6267AF24E00D59F58 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		352B16D3267306D7001F33CB /* Debug */ = {
@@ -668,25 +686,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		35CBF2502679AAB70034A55E /* XCRemoteSwiftPackageReference "MDText" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Lambdo-Labs/MDText";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.10;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		35CBF2512679AAB70034A55E /* MDText */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 35CBF2502679AAB70034A55E /* XCRemoteSwiftPackageReference "MDText" */;
-			productName = MDText;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 352B16A8267306D6001F33CB /* Project object */;
 }

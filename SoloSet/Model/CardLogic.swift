@@ -56,6 +56,39 @@ struct CardLogic {
         }
     }
     
+    
+    
+    private mutating func match() {
+        if let firstCard = tableTop.first(where: {$0.id == choosedIds[0]}),
+           let secondCard = tableTop.first(where: {$0.id == choosedIds[1]}),
+           let thirdCard = tableTop.first(where: {$0.id == choosedIds[2]}){
+            if superCompare(a: firstCard.content, b: secondCard.content, c: thirdCard.content) {
+                if !(firstCard.isTipping && secondCard.isTipping && thirdCard.isTipping) {
+                    score += 3
+                }
+                for choosedId in choosedIds{
+                    if let i = tableTop.indices.first(where: {tableTop[$0].id == choosedId}) {
+                        cemetery.append(tableTop.remove(at: i))
+                    }
+                }
+                if !deck.isEmpty && tableTop.count<12 {
+                    tableTop.append(deck.removeFirst())
+                    tableTop.append(deck.removeFirst())
+                    tableTop.append(deck.removeFirst())
+                }
+            }else{
+                score -= 1
+                for choosedId in choosedIds{
+                    if let i = tableTop.indices.first(where: {tableTop[$0].id == choosedId}) {
+                        tableTop[i].isChoosing = false
+                    }
+                }
+            }
+            choosedIds.removeAll()
+        }
+    }
+    
+    
     mutating func tip() {
         print("tips")
         let result = isTableCanMatch()
@@ -82,33 +115,7 @@ struct CardLogic {
     
     
     
-    private mutating func match() {
-        if let firstCard = tableTop.first(where: {$0.id == choosedIds[0]}),
-           let secondCard = tableTop.first(where: {$0.id == choosedIds[1]}),
-           let thirdCard = tableTop.first(where: {$0.id == choosedIds[2]}){
-            if superCompare(a: firstCard.content, b: secondCard.content, c: thirdCard.content) {
-                score += 3
-                for choosedId in choosedIds{
-                    if let i = tableTop.indices.first(where: {tableTop[$0].id == choosedId}) {
-                        cemetery.append(tableTop.remove(at: i))
-                    }
-                }
-                if !deck.isEmpty {
-                    tableTop.append(deck.removeFirst())
-                    tableTop.append(deck.removeFirst())
-                    tableTop.append(deck.removeFirst())
-                }
-            }else{
-                score -= 1
-                for choosedId in choosedIds{
-                    if let i = tableTop.indices.first(where: {tableTop[$0].id == choosedId}) {
-                        tableTop[i].isChoosing = false
-                    }
-                }
-            }
-            choosedIds.removeAll()
-        }
-    }
+    
     
     
     

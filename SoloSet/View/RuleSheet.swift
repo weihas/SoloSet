@@ -9,116 +9,88 @@ import SwiftUI
 
 
 struct RuleSheet: View {
+    var exampleCards = ExampleCards().exampleCards
     var body: some View {
         ScrollView{
             VStack{
-                Text("Rules")
+                Text("Title")
                     .font(.title)
                     .padding()
-                Text("""
-            The object of the game is to identify a 'Set' of three cards from 12 cards laid out on the table. Each card has a variation of the following four features:
-            
-            1) COLOR: Each card is red, green, or blue.
-            2) SYMBOL: Each card contains ovals, squiggles, or diamonds.
-            3) NUMBER: Each card has one, two, or three symbols.
-            4) SHADING: Each card is solid, open, or striped.
-            """)
+                Text("Introduce")
                     .padding()
-                
-                Text("""
-            A 'Set' consists of three cards in which each feature is EITHER the same on each card OR is different on each card. That is to say, any feature in the 'Set' of three cards is either common to all three cards or is different on each card.
-            """)
-                    .padding()
-                
-                
-                Text("For Example:")
+
+                Text("Example")
                     .font(.headline)
                     .multilineTextAlignment(.leading)
                 
-                let card1 = Card(id: 0, isChoosing: true, isTipping: true, content: Card.Content(color: .green, symbol: .capsule, num: 2, shading: .solid))
-                let card2 = Card(id: 1, isChoosing: true, isTipping: true, content: Card.Content(color: .red, symbol: .capsule, num: 2, shading: .solid))
-                let card3 = Card(id: 2, isChoosing: true, isTipping: true, content: Card.Content(color: .blue, symbol: .capsule, num: 2, shading: .solid))
-                
-                Text("""
-                    1) color: different on each card, symbol: the same on each card (oval), number: the same on each (two), shading: the same on each card (solid)
-                    
-                    """)
-                    .padding()
                 HStack{
-                    CardView(card: card1, themeColor: .orange)
+                    CardView(card: exampleCards[0], themeColor: .orange)
                         .aspectRatio(2/3, contentMode: .fit)
                         .padding(5)
-                    CardView(card: card2, themeColor: .orange)
+                    CardView(card: exampleCards[1], themeColor: .orange)
                         .aspectRatio(2/3, contentMode: .fit)
                         .padding(5)
-                    CardView(card: card3, themeColor: .orange)
+                    CardView(card: exampleCards[2], themeColor: .orange)
                         .aspectRatio(2/3, contentMode: .fit)
                         .padding(5)
                 }
                 .frame(height: 150)
                 .padding()
                 
-                Text("""
-                2) color: different on each card, symbol: different on each card, number: different on each card, shading: different on each card
-                """)
-                    
-                    .padding()
-                let card4 = Card(id: 0, isChoosing: true, isTipping: true, content: Card.Content(color: .blue, symbol: .diamond, num: 2, shading: .diagonal))
-                let card5 = Card(id: 1, isChoosing: true, isTipping: true, content: Card.Content(color: .red, symbol: .curve, num: 1, shading: .solid))
-                let card6 = Card(id: 2, isChoosing: true, isTipping: true, content: Card.Content(color: .green, symbol: .capsule, num: 3, shading: .hollow))
+                Text("Exa1").padding()
+
                 HStack{
-                    CardView(card: card4, themeColor: .orange)
+                    CardView(card: exampleCards[3], themeColor: .orange)
                         .aspectRatio(2/3, contentMode: .fit)
                         .padding(5)
-                    CardView(card: card5, themeColor: .orange)
+                    CardView(card: exampleCards[4], themeColor: .orange)
                         .aspectRatio(2/3, contentMode: .fit)
                         .padding(5)
-                    CardView(card: card6, themeColor: .orange)
+                    CardView(card: exampleCards[5], themeColor: .orange)
                         .aspectRatio(2/3, contentMode: .fit)
                         .padding(5)
                 }
                 .frame(height: 150)
                 .padding()
                 
-                Text("""
-                    3) color: the same on each card (green), symbol: the same on each card (diamond), number: different on each card, shading: different on each card
-                    """).padding()
-                
-                let card7 = Card(id: 0, isChoosing: true, isTipping: true, content: Card.Content(color: .blue, symbol: .diamond, num: 2, shading: .solid))
-                let card8 = Card(id: 1, isChoosing: true, isTipping: true, content: Card.Content(color: .red, symbol: .diamond, num: 3, shading: .diagonal))
-                let card9 = Card(id: 2, isChoosing: true, isTipping: true, content: Card.Content(color: .green, symbol: .diamond, num: 1, shading: .hollow))
+                Text("Exa2").padding()
+
                 HStack{
-                    CardView(card: card7, themeColor: .orange)
+                    CardView(card: exampleCards[6], themeColor: .orange)
                         .aspectRatio(2/3, contentMode: .fit)
                         .padding(5)
-                    CardView(card: card8, themeColor: .orange)
+                    CardView(card: exampleCards[7], themeColor: .orange)
                         .aspectRatio(2/3, contentMode: .fit)
                         .padding(5)
-                    CardView(card: card9, themeColor: .orange)
+                    CardView(card: exampleCards[8], themeColor: .orange)
                         .aspectRatio(2/3, contentMode: .fit)
                         .padding(5)
                 }
                 .frame(height: 150)
                 .padding()
+                
+                Text("Exa3").padding()
             }
-            VStack{
-                Text("Score")
-                    .font(.title2)
-                    .multilineTextAlignment(.leading)
-                Text("""
-                    1)Choose the right match and deduct one point anyway.
-                    2)Choose to deduct two points when there is a matchable card on the desktop.
-                    
-                    """)
-            }
-            .padding()
         }
         .foregroundColor(.accentColor)
     }
+    
+    
+   
 }
 
 struct RuleSheet_Previews: PreviewProvider {
     static var previews: some View {
         RuleSheet()
+            .environment(\.locale, Locale(identifier: "zh" ))
+        RuleSheet()
+            .environment(\.locale, Locale(identifier: "en" ))
     }
 }
+
+
+
+
+
+
+
